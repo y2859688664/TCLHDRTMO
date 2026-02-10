@@ -70,3 +70,16 @@ Finally, we discuss the limitations of current objective quality metrics (IQA) f
 14.	<mark>Multi-Scale-Hist</mark> "Tone Mapping Based on Multi-scale Histogram Synthesis". Yang J, Liu Z, Shahnovich U, et al.. arXiv 2021. [[Paper]( https://arxiv.org/abs/2102.00408)]
 15.	<mark>Perceptually Adaptive</mark> "Perceptually Adaptive Real-Time Tone Mapping". Tariq T, Matsuda N, Penner E, et al.. SIGGRAPH Asia 2023. [[Paper]( https://dl.acm.org/doi/abs/10.1145/3610548.3618222)]
 
+## Deep Learning-based
+### Generative & Representation Learning
+1.	<mark>DeepTMO</mark> "Deep Tone Mapping Operator for High Dynamic Range Images". Rana A, Singh P, Valenzise G, et al.. IEEE Access 2019. [[Paper]( https://arxiv.org/abs/1908.04197)]
+2.	<mark>TMNet </mark> "Deep tone mapping network in HSV color space". Zhang N, Wang C, Zhao Y, et al.. IEEE Access 2019. [[Paper]( https://ieeexplore.ieee.org/abstract/document/8965992)]
+3.	<mark>TMO-Net</mark> "TMO-Net: A Parameter-Free Tone Mapping Operator Using Generative Adversarial Network". Panetta K, Kezebou L, Oludare V, et al.. IEEE Access 2021. [[Paper]( https://ieeexplore.ieee.org/document/9371686)]
+4.	<mark>Deep Laplacian</mark> "Perceptually Optimized Deep High-Dynamic-Range Image Tone Mapping". Le C, Yan J, Fang Y, et al.. arXiv 2021. [[Paper]( https://arxiv.org/abs/2109.00180)]
+5.	<mark>Deep Reformulated Laplacian</mark> "Deep Reformulated Laplacian Tone Mapping". Yang J, Liu Z, Lin M, et al.. arXiv 2021. [[Paper]( https://arxiv.org/abs/2102.00348)]
+6.	<mark>Unpaired-TMO</mark> "Unpaired Learning for High Dynamic Range Image Tone Mapping". Vinker Y, Huberman-Spiegelglas I, Fattal R. ICCV 2021. [[Paper]( https://openaccess.thecvf.com/content/ICCV2021/papers/Vinker_Unpaired_Learning_for_High_Dynamic_Range_Image_Tone_Mapping_ICCV_2021_paper.pdf)]
+7.	<mark>PS-TMO</mark> "A Perceptually Optimized and Self-Calibrated Tone Mapping Operator". Cao P, Le C, Fang Y, et al.. IEEE TMM 2023. [[Paper]( https://ieeexplore.ieee.org/document/10982125)]
+8.	<mark>IVTMNet</mark> "Unsupervised HDR Image and Video Tone Mapping via Contrastive Learning". Cao C, Yue H, Liu X, et al.. arXiv 2023. [[Paper]( https://arxiv.org/abs/2303.07327)]
+9.	<mark>TMO-GAN</mark> "A Generative Adversarial Network Based Tone Mapping Operator for 4K HDR Images". Zhang J, Wang Y, Tohidypour H, et al.. ICNC 2023. [[Paper]( https://ieeexplore.ieee.org/document/10074176)]
+10.	<mark>G-SemTMO</mark> "G-SemTMO: Tone Mapping with a Trainable Semantic Graph". Goswami A, Bernard E, Hauser W, et al.. arXiv 2024. [[Paper]( https://arxiv.org/abs/2208.14113)]
+11.	<mark>DPRNet</mark> "Learning Differential Pyramid Representation for Tone Mapping". Yang Q, Zhang F, Li Y, et al.. AAAI 2024. [[Paper]( https://arxiv.org/abs/2412.01463)]
