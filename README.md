@@ -51,3 +51,22 @@ Finally, we discuss the limitations of current objective quality metrics (IQA) f
 | **HDRQAD** | | 235 | ffmpeg-linear | 1080×944 | - |
 | **HDRT** | | 10000 | Linear | 5120×3840 | [Link](https://huggingface.co/datasets/jingchao-peng/HDRTDataset) |
 | **SJTU-HDR** | | 16 | PQ | 2160×3840 | [Link](https://medialab.sjtu.edu.cn/files/SJTU%20HDR%20Video%20Sequences/demo_images/) |
+
+##Traditional & Optimization-based
+###Algorithm & Modeling
+1.	<mark>WardHistAdj</mark> "A Visibility Matching Tone Reproduction Operator for High Dynamic Range Scenes". Larson G W, Rushmeier H, Piatko C. IEEE TVCG 1997. [[Paper]( https://ieeexplore.ieee.org/document/646233)]
+2.	<mark>Ashikhmin</mark> "A Tone Mapping Algorithm for High Contrast Images". Ashikhmin M. EGWR 2002. [[Paper]( https://dl.acm.org/doi/10.5555/581896.581916)]
+3.	<mark>Reinhard</mark> "Photographic Tone Reproduction for Digital Images". Reinhard E, Stark M, Shirley P, et al.. SIGGRAPH 2002. [[Paper]( https://dl.acm.org/doi/10.1145/566654.566575)]
+4.	<mark>Drago</mark> "Adaptive Logarithmic Mapping For Displaying High Contrast Scenes". Drago F, Myszkowski K, Annen T, et al.. Eurographics 2003. [[Paper]( https://resources.mpi-inf.mpg.de/tmo/logmap/logmap.pdf)]
+5.	<mark>ReinhardDevlin</mark> "Dynamic Range Reduction Inspired by Photoreceptor Physiology". Reinhard E, Devlin K. IEEE TVCG 2005. [[Paper]( https://cs.ucf.edu/~ceh/Publications/Papers/Rendering/IEEETVCG04ReinhardDevlin.pdf)]
+6.	<mark>Lischinski</mark> "iCAM06: A refined image appearance model for HDR image rendering". Kuang J, Johnson G M, Fairchild M D. JVCIR 2007. [[Paper]( https://dl.acm.org/doi/10.1016/j.jvcir.2007.06.003)]
+7.	<mark>KimKautzConsistent</mark> "Consistent Tone Reproduction". Kim M H, Kautz J. IASTED CGIM 2008. [[Paper]( https://vclab.kaist.ac.kr/cgim2008/MHKim_JKautz_CGIM2008s.pdf)]
+8.	<mark>Raman</mark> "Bilateral Filter Based Compositing for Variable Exposure Photography". Raman S, Chaudhuri S. Eurographics 2009. [[Paper]( http://andrewd.ces.clemson.edu/courses/cpsc482/papers/RC09_bilateralFilterCompositing.pdf)]
+9.	<mark>Windowed</mark> "Globally Optimized Linear Windowed Tone-Mapping". Shan Q, Jia J, Brown M S. IEEE TVCG 2010. [[Paper]( https://grail.cs.washington.edu/projects/sq_tonemapping/tonemapping_tvcg.pdf)]
+10.	<mark>Optimized</mark> "Optimizing a Tone Curve for Backward-Compatible High Dynamic Range Image and Video Compression". Mai Z, Mansour H, Mantiuk R, et al.. IEEE TIP 2011. [[Paper]( https://www.cl.cam.ac.uk/~rkm38/pdfs/mai11otc.pdf)]
+11.	<mark>Gradient-Domain</mark> "Gradient-Domain Image Reconstruction Framework with Intensity-Range and Base-Structure Constraints". Shibata T, Tanaka M, Okutomi M. CVPR 2016. [[Paper]( https://openaccess.thecvf.com/content_cvpr_2016/papers/Shibata_Gradient-Domain_Image_Reconstruction_CVPR_2016_paper.pdf)]
+12.	<mark>Krawczyk</mark> "Perceptual Lightness Modeling for High-Dynamic-Range Imaging". Abebe M A, Pouli T, Larabi M C, et al.. ACM TAP 2017. [[Paper]( https://dl.acm.org/doi/epdf/10.1145/3086577)]
+13.	<mark>Hybrid-l1-l0</mark> "A Hybrid l1-l0 Layer Decomposition Model for Tone Mapping". Liang Z, Xu J, Zhang D, et al.. CVPR 2018. [[Paper]( https://openaccess.thecvf.com/content_cvpr_2018/papers/Liang_A_Hybrid_l1-l0_CVPR_2018_paper.pdf)]
+14.	<mark>Multi-Scale-Hist</mark> "Tone Mapping Based on Multi-scale Histogram Synthesis". Yang J, Liu Z, Shahnovich U, et al.. arXiv 2021. [[Paper]( https://arxiv.org/abs/2102.00408)]
+15.	<mark>Perceptually Adaptive</mark> "Perceptually Adaptive Real-Time Tone Mapping". Tariq T, Matsuda N, Penner E, et al.. SIGGRAPH Asia 2023. [[Paper]( https://dl.acm.org/doi/abs/10.1145/3610548.3618222)]
+
