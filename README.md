@@ -2,29 +2,40 @@
 
 > **[A Survey on High Dynamic Range Imaging and Tone Mapping Operators](https://arxiv.org/your-paper-link)**
 >
-> *<sup>1</sup>Your Lab/University Name, <sup>2</sup>Co-author Affiliation*
+> *<sup>1</sup>Your Lab, <sup>2</sup>University A, <sup>2</sup>University B*
 
 **⚡We will actively maintain this repository and incorporate new research as it emerges. If you have any questions, please contact [your_email@domain.com]. Welcome to collaborate on academic research and writing papers together.**
 
-## 📌 What is This Project About?
+## 📌 What is This Survey About?
 
 <p align="center">
-    <img src="TMOpipline.png" width="100%" alt="HDR and Tone Mapping Pipeline">
+    <img src="TMO.png" width="100%" alt="Luminance Range and Human Vision">
 </p>
 
-High Dynamic Range (HDR) imaging is essential for capturing and reproducing the vast range of luminosity found in real-world scenes. As display technologies and capture devices evolve, the pipeline from **Real Scenes** to final **Display Variations** has become increasingly complex.
+<p align="center">
+    <b>Figure 1: The Physical Basis of HDR.</b> <br>
+    The real world exhibits a vast dynamic range of luminance, from starlight ($10^{-6} cd/m^2$) to sunlight ($10^{9} cd/m^2$). However, standard displays (CRT/LCD) cover a much narrower range. <b>Tone Mapping Operators (TMOs)</b> serve as the critical bridge, mimicking the human visual system's adaptive capabilities to compress this wide dynamic range into the visible gamut of display devices.
+</p>
 
-This repository (and associated survey) aims to provide a comprehensive roadmap of the HDR imaging pipeline, with a specific focus on:
+<br>
 
-1.  **Source Acquisition:** Processing pipelines for RAW/Log data and Multi-exposure Fusion techniques.
-2.  **Image Processing Pipeline:** The transformation from linear light to perceptual quantizers (PQ/HLG) and standard formats.
-3.  **Tone Mapping Operators (TMOs):** A deep dive into the "LTM Core," covering the critical transition from HDR to LDR displays. We categorize methods into:
-    * 📈 **Global TMOs**
-    * 🖼️ **Local TMOs**
-    * 🧠 **Deep Neural Network (DNN) TMOs**
-4.  **Display Adaptation:** Strategies for HDR-to-HDR (e.g., HDR10, Dolby Vision) and HDR-to-LDR rendering.
+<p align="center">
+    <img src="TMOpipline.jpg" width="100%" alt="HDR Imaging Pipeline">
+</p>
 
-Our key goal is to organize the state-of-the-art methods in tone mapping and value the evaluation of visual quality in the HDR domain.
+<p align="center">
+    <b>Figure 2: The Modern HDR Processing Pipeline.</b> <br>
+    A comprehensive view of the image processing workflow:
+    (1) <b>Acquisition</b>: Capturing raw data via Professional Cameras (RAW/Log) or Exposure Fusion.
+    (2) <b>Processing</b>: Converting signals using transfer functions like <b>PQ (Perceptual Quantizer)</b> and <b>HLG (Hybrid Log-Gamma)</b>.
+    (3) <b>LTM Core</b>: The central tone mapping stage, categorizing algorithms into Global, Local, and DNN-based methods to adapt content for both HDR (HDR10, Dolby Vision) and LDR displays.
+</p>
+
+<br>
+
+High Dynamic Range (HDR) imaging is gaining increasing attention in both computer graphics and computational photography. Over the past few decades, significant efforts have been made to optimize the pipeline from capture to display. This paper presents a comprehensive review of the state-of-the-art methods, focusing on the evolution from traditional global operators to modern Deep Neural Network (DNN) approaches.
+
+Finally, we discuss the limitations of current objective quality metrics (IQA) for tone-mapped images and explore promising future directions. Our key argument is that evaluation should be integrated into the design loop to better support the development of next-generation visual systems.
 
 ## HDR 数据集汇总
 
