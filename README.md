@@ -19,6 +19,9 @@
 
 <br>
 
+With the steady advancement of photographic technologies and the continuous improvement of display devices, modern image sensors are now capable of capturing scenes with higher dynamic ranges and richer illumination details. Traditional image sensors typically provide only 8–10 bits of quantization precision, which is insufficient to fully record information in both bright highlights and dark regions. In contrast, contemporary high-performance CMOS and CCD sensors commonly achieve quantization precisions of 12 to 16 bits. However, most existing display devices—including monitors, projectors, VR head-mounted displays, and printers—still offer a much narrower dynamic range than that of image sensors. As a result, high dynamic range (HDR) images cannot be directly displayed on these devices. How to faithfully present the visual information contained in HDR images on low dynamic range (LDR) displays has therefore become a prominent research topic in the image processing community in recent years.
+
+
 <p align="center">
     <img src="TMOpipline.png" width="100%" alt="HDR Imaging Pipeline">
 </p>
@@ -33,9 +36,17 @@
 
 <br>
 
-High Dynamic Range (HDR) imaging is gaining increasing attention in both computer graphics and computational photography. Over the past few decades, significant efforts have been made to optimize the pipeline from capture to display. This paper presents a comprehensive review of the state-of-the-art methods, focusing on the evolution from traditional global operators to modern Deep Neural Network (DNN) approaches.
+As illustrated in Fig. 2, the unified tone mapping pipeline from real-world scene acquisition to display adaptation is commonly referred to as the industrial HDR imaging workflow. After being captured by imaging devices, real-world scenes can generate multiple types of source assets.
 
-Finally, we discuss the limitations of current objective quality metrics (IQA) for tone-mapped images and explore promising future directions. Our key argument is that evaluation should be integrated into the design loop to better support the development of next-generation visual systems.
+One category consists of sensor-response–based RAW data or logarithmically encoded signals, such as RED R3D, Apple ProRAW, Sony S-Log, and DJI D-Log. These formats typically preserve a wide dynamic range of the scene and require professional post-processing tools for decoding and linearization in order to recover a scene-referred HDR representation.
+
+The other category includes display-referred HDR images that are directly generated either during image acquisition or through in-camera processing pipelines. Such images are often produced using built-in tone mapping or exposure fusion strategies, where multiple exposures are adaptively combined to enhance local contrast and visible details. Although these images exhibit HDR-like visual appearance, their luminance relationships and dynamic range have already been implicitly embedded within the fusion or mapping operators, and thus lack explicit physical radiance meaning. In the pipeline, they are therefore uniformly treated as display-referred or pseudo-HDR inputs.
+
+At the core of the image processing pipeline, HDR images are uniformly modeled as luminance representations that can be converted across multiple encoding domains, including the linear domain, Perceptual Quantizer (PQ), and Hybrid Log-Gamma (HLG). Among them, PQ and HLG correspond to different assumptions about absolute luminance and distinct display adaptation mechanisms. Through linearization, normalization, and encoding transformations, HDR signals can be adapted for subsequent algorithmic processing and system implementation—such as engineering-level conversions based on FFmpeg—while maintaining perceptual consistency.
+
+At the output and display stage, the workflow diverges into two typical processing paths depending on target display capabilities and application requirements. On the one hand, HDR-to-HDR processing focuses on achieving perceptually consistent reproduction across different HDR standards and display ecosystems. This is commonly realized by incorporating display-oriented enhancement frameworks such as HDR10, HDR10+, and Dolby Vision, which aim to optimize luminance, contrast, and color consistency across devices.
+
+On the other hand, HDR-to-LDR tone mapping addresses dynamic range compression as its core challenge. This category includes global tone mapping operators, local adaptive methods, and deep neural network–based TMO models. The primary objective is to preserve the structural content, fine details, and subjective visual quality of the original HDR scene to the greatest extent possible under constrained display conditions.
 
 ## HDR 数据集汇总
 
